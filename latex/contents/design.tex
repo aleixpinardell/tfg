@@ -1,0 +1,189 @@
+En esta sección se abordará el diseño conceptual de un ekranoplano de tipo Lippisch, el cual servirá de base para la construcción del modelo a escala que posteriormente será sometido a distintas pruebas con el fin de determinar sus prestaciones.
+
+Para ello se partirá de datos de ekranoplanos Lippisch ya existentes que gocen de cierto prestigio, así como algunas de las técnicas de diseño incluidas en RAYMER, ROSKAM, TORENBEEK...
+
+Teniendo en cuenta las dificultades que previsiblemente se encontrarán a la hora de construir con exactitud el modelo a escala, durante el diseño de la aeronave primará la sencillez y rapidez de cálculo sobre la precisión, marcando como objetivo la determinación del orden de magnitud de una serie de parámetros, principalmente geométricos y de peso. Además, los métodos de diseño detallados en la bibliografía se basan en aeronaves que no operan en efecto suelo, por lo que carece de sentido aplicarlos extrictamente.
+
+
+\subsection{Aeronaves similares}
+\label{sec:design:similar}
+
+El primer paso en la concepción de cualquier aeronave es estudiar qué se ha hecho anteriormente en su ámbito. Por ello, se han seleccionado cuatro ekranoplanos de tipo Lippisch que se considera tuvieron cierta relevancia: el Lippisch X-114, el Airfish 3, el Airfish 8 y el Aquaglide-5.
+
+\begin{itemize}
+\item \textbf{Lippisch X-114}. Considerado uno de los modelos pioneros en el sector de los ekranoplanos Lippisch, fue diseñado por Alexander Lippisch en la década de los 70 en base al X-112. Cuenta con espacio para un piloto y hasta 6 pasajeros e incluye boyas en los extremos alares y en la parte posterior, \rmfig{lippischX114}{jpg}{120}{bt}{Lippisch X-114}, con el fin de conseguir un despegue y aterrizaje más suaves.
+\item \textbf{Airfish 3}. Diseñado por Hanno Fischer y probado por primera vez en 1990, cuenta con espacio para hasta cuatro personas, y tiene una dimensiones ligeramente inferiores al Lippisch X-114, \rmfig{airfish3}{jpg}{120}{bt}{Airfish 3}. Además, no es capaz de operar fuera del área de influencia del efecto suelo.
+\item \textbf{Airfish 8}. Probado por primera vez en el año 2000, se trata de una evolución del Airfish 3. Cuenta una mayor capacidad, de hasta 6 pasajeros y dos tripulantes, \rmfig{airfish8}{jpg}{120}{bt}{Airfish 8}.
+\item \textbf{Aquaglide-5}. Introducido en la segunda mitad de la década de los 2000 por la compañía \emph{Artic Trade and Transport}, incorpora la última tecnología en material compuesto y cuenta con capacidad para hasta 5 pasajeros y un piloto, \rmfig{aquaglide5}{jpg}{120}{bt}{Aquaglide-5}.
+\end{itemize}
+
+\FloatBarrier
+
+En la Tabla \ref{tab:similar} se resumen las principales características y prestaciones de las cuatro aeronaves seleccionadas.
+
+\begin{table}[ht]
+\centering
+\caption{Principales características y prestaciones de aeronaves similares.}
+\label{tab:similar}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Parámetro                            & Lippisch X-114  & Airfish 3                 & Airfish 8  & Aquaglide-5      \\ \midrule
+Año                                  & 1977            & 1990                      & 2001       & 2009             \\
+Tripulación                          & 1               & 1                         & 2          & 1                \\
+Pasajeros                            & 6               & 3                         & 6          & 4                \\ \hline
+Longitud {[}m{]}                     & 12.80           & 9.90                      & 17.22      & 10.66            \\
+Envergadura {[}m{]}                  & 7.00            & 7.50                      & 15.16      & 5.90             \\
+Altura {[}m{]}                       & 2.90            & 2.60                      & 3.35       & 3.35             \\ \hline
+Peso en vacío {[}kg{]}                         & 1000            &                           &            & 2010             \\
+Carga de pago {[}kg{]}                          &                 & 220                       & 220        & 300              \\
+Peso máximo {[}kg{]}                        & 1500            & 760                       & 860        & 2400             \\ \hline
+Número de motores                    & 1               & 1                         & 2          & 2                \\
+Potencia unitaria {[}hp{]}           & 200             & 75                        & 115        & 163              \\
+Hélices                              & 5               &                           & 4          & 4                \\
+Configuración motora                 & Propulsora      & Tractora                  & Propulsora & Tractora         \\ \hline
+Velocidad de crucero {[}km/h{]} & 150             & 120                       & 160        & 160              \\
+Alcance {[}km{]}                & 2000            & 760                       & 370        & 400              \\
+Altitud de crucero {[}m{]} & 0.175           & 0.1                       & 1          &                  \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+
+\subsection{Idea de configuración}
+\label{sec:design:config}
+
+\paragraph{Capacidad.} La aeronave a diseñar contará con espacio para hasta 5 pasajeros. Esta cifra se ha tomado teniendo en cuenta que los modelos que de ekranoplanos de tipo Lippisch considerados tienen todos espacio para entre 3 y 6 pasajeros. Actualmente, algunas compañías, como Antartic Trade and Transport, se encuentran desarrollando ekranoplanos de mayores dimensiones, con capacidades de más de 100 pasajeros. Sin embargo, inicialmente se encontraron dificultades al no ser factible escalar con éxito los modelos más pequeños, y se ha tenido que realizar un gran esfuerzo para desarrollar nuevas tecnologías que permitan la operación de ekranoplanos de grandes dimensiones. Como esta tecnología está todavía en fase experimental, se ha preferido elegir para la aeronave de diseño una capacidad cuya viabilidad ya ha sido demostrada en el pasado.
+
+Cabe destacar que, aunque se haya mencionado que la capacidad de la aeronave es de 5 pasajeros, esto no quiere decir necesariamente que ésta se dedique a transporte de pasajeros exclusivamente. Podría perfectamente dedicarse al transporte de carga, en cuyo caso se debería aplicar una equivalencia de peso. Es habitual tomar que cada pasajero corresponde a unos 70 kg (sin equipaje), por lo que la aeronave contaría con una capacidad de carga de hasta 350 kg.
+
+\paragraph{Tripulación.} Se considera que debido al reducido número de pasajeros que se espera que vayan a bordo del vehículo, será suficiente con un único piloto. De las aeronaves similares consideradas, tan sólo una de ellas incluye dos tripulantes.
+
+\paragraph{Ala.} Como es habitual en la categoría de ekranoplanos de tipo Lippisch, el ala consiste en un ala delta invertida, situada a una altura media respecto el fuselaje, y con dihedro negativo, es decir, cerrándose hacia el suelo. Además, cuenta con un cierto ángulo de ataque, de modo que el borde de ataque se sitúa a una altura superior en relación al borde de fuga.
+
+\paragraph{Cola.} La cola se sitúa en una posición elevada, con el fin de que no se vea excesivamente afectada por el efecto suelo. En las aeronaves similares consideradas, se ha utilizado dos tipos de colas. Por un lado, se observa la cola en T, en la que existe un único timón vertical, sobre el cual se sitúa el estabilizador horizontal; por otro lado, se ha usado también una variante en que existen dos timones verticales que tienden a forman una V entre sí, y sobre los cuales se sitúa el estabilizador horizontal. Se ha preferido hacer uso para la aeronave de diseño de una cola T, pues resulta más sencilla de construir.
+
+\paragraph{Planta propulsora.} Ninguno de los modelos considerados cuenta con la tecnología PAR, por lo que disponen de una única planta propulsora que se utiliza tanto durante la fase de crucero como el despegue. Los motores utilizados son de tipo piston-prop, y en el caso de los modelos más antiguos se incorporo solo una unidad, mientras que en los más nuevos se ha preferido incluir dos motores, otorgando mayor seguridad de operación en caso de fallo de un motor.
+
+En cualquier caso, éste no es un factor determinante en el diseño de la aeronave, pues en este primera fase de pruebas se pretende evaluar las propiedades de un modelo no autopropulsado. Sin embargo, sí puede resultar interesante conocer el motor a utilizar en la versión autopropulsada, ya que el motor aporta un peso concentrado significativo y contribuye al aumento de la resistencia de la aeronave, modificando sus características y prestaciones. Por ello, más adelante se determinará el motor a utilizar y se tendrán en cuenta su peso y localización para hacer coincidir el centro de gravedad del modelo a escala con el de la aeronave de diseño.
+
+
+\subsection{Estimación de pesos}
+\label{sec:design:weights}
+
+Uno de los primeros pasos en el diseño de toda aeronave pasa por estimar su peso máximo al despegue. Este parámetro es relativamente fácil de estimar, y se puede utilizar más adelante a medida que se detallan el resto de características y prestaciones.
+
+El método seguido para estimar el peso de la aeronave es el propuesto por Raymer[ref], según el cual éste se puede dividir en varios aportes:
+\eq{Wto1}{
+W_{to} = W_c + W_p + W_e + W_f
+}
+
+El peso de la tripulación y la carga de pago es fácil de estimar, pero los pesos de la aeronave en vacío y del combustible dependen al mismo tiempo de $W_{to}$, por lo que resulta conveniente escribir la anterior expresión en la forma:
+\eq{Wto2}{
+W_{to} = W_c + W_p + \left( \frac{W_e}{W_{to}} \right)W_{to} + \left( \frac{W_f}{W_{to}} \right)W_{to}
+}
+
+Despejando $W_{to}$ de \req{Wto2} se obtiene:
+\eq{Wto}{
+W_{to} = \frac{W_c+W_p}{1-\left( \frac{W_e}{W_{to}} \right)-\left( \frac{W_f}{W_{to}} \right)}
+}
+
+En los apartados sucesivos se estimarán los pesos y relaciones que aparecen en \req{Wto} y que permitirán la obtención del valor del peso máximo al despegue de la aeronave de diseño.
+
+
+\subsubsection{Peso de la tripulación y carag de pago}
+\label{sec:design:weights:cpl}
+
+Como ya se ha comentado anteriormente, es habitual tomar la equivalencia de 70 kg por persona. Para la tripulación se tiene:
+\eq{Wc}{
+W_c \cong 1\times70 = 70$ kg$
+}
+Y para la carga de pago:
+\eq{Wp}{
+W_p \cong 5\times70 = 350$ kg$
+}
+
+
+\subsubsection{Peso en vacío}
+\label{sec:design:weights:empty}
+
+Para la estimación de la fracción de peso en vacío existen varios métodos. Uno de ellos consiste en buscar una relación lineal entre los logaritmos en base 10 de los pesos al despegue y los pesos en vacío de aeronaves con características similares a la que se pretende diseñar.
+
+Sin embargo, dada la escasez de datos relativos a ekranoplanos de tipo Lippisch, la relación obtenida es poco fiable y por ello se ha preferido hacer uso de una relación derivada por Roskam para una categoría de aeronaves similar. Éste es el ajuste propuesto para aeronaves anfibias:
+\eq{We}{
+W_e = 10^{\frac{\log_{10}W_{to}-0.1583}{1.0108}}
+}
+
+Como se puede observar, tanto $W_e$ como $\left( \frac{W_e}{W_{to}} \right)$ dependen del peso de la aeronave al despegue, que es lo que se pretende hallar. Por ello, será necesario iterar la ecuación \req{Wto} para poder obtener la estimación necesaria.
+
+
+\subsubsection{Peso de combustible}
+\label{sec:design:weights:fuel}
+
+Por último, para la determinación de la fracción de combustible, se deberá estudiará la misión a realizar. A partir de la ecuación de Breguet para el alcance se puede determinar la fracción de peso correspondiente a la fase de crucero:
+\eq{breguet}{
+R = \frac{V}{C_e}\left(\frac{L}{D}\right)\ln\frac{W_{i}}{W_{f}}
+}
+donde $W_i$ y $W_f$ son, respectivamente, el peso de la aeronave al inicio y al final de la fase de crucero.
+
+Por lo tanto, despejando la fracción de pesos para el crucero de \req{breguet}, se puede conocer cuánto ha variado el peso de la aeronave y por lo tanto el peso de combustible quemado. Sin embargo, no solo durante el crucero se quema combustible. En el caso específico de los ekranoplanos, el despegue es una fase muy solicitante, por lo que es previsible que se consuman grandes cantidades de combustible durante el mismo. Ante la falta de una base de datos estadísticamente significativa sobre las fracciones de peso relativas a encendido de motores, despegue, aterrizaje, etc. en ekranoplanos Lippisch, se pueden tomar como referencia los datos relativos una vez más a aeronaves anfibias. De este modo, se obtiene que durante las distintas fases de la misión, excluyendo la de crucero, se consume una cantidad de combustible equivalente al 6\% del peso inicial de la aeronave.
+
+Dada la exigencia de potencia extra requerida durante el despegue en la categoría de los ekranoplanos, se podría esperar una fracción de peso mayor que en las aeronaves anfibias. Sin embargo, éstas se diseñan para aterrizar y despegar tanto en agua como en tierra, por lo que también se consideran algunas fases no existentes en el caso del ekranoplano, como por ejemplo el \emph{taxing} por la pista o los circuitos de espera realizados cuando el aeropuerto está congestionado. El exceso de combustible requerido para el despegue podría verse compensado por la ausencia de estas fases, así que para la aeronave de diseño parece sensato tomar el 6\% citado anteriormente.
+
+Afortunadamente el peso de combustible consumido durante la fase de crucero se puede determinar con mayor precisión. A cotinuación se procederá en primer lugar a fijar los distintos parámetros que aparecen en la ecuación \req{breguet} para luego despejar y obtener el valor de la fracción de peso.
+
+\paragraph{Alcance.} El primer paso es fijar el alcance de la aeronave. A priori se podría tomar cualquier valor deseado, aunque debe ser razonable y estar en el mismo orden de magnitud de aviones similares de la misma categoría. En base a prestaciones y características de los ekranoplanos de referencia y a la tendencia histórica observada, se ha optado por establecer el alcance en 800 km.
+
+\paragraph{Velocidad.} La velocidad de crucero es un parámetro de diseño que también ofrece cierta flexibilidad a la hora de concebir la aeronave. Sin embargo, para los ekranoplanos de tipo Lippisch con características similares al que se pretende diseñar, parece existir un valor estándard situado en torno los 150-160 km/h, sustancialmente superior a la velocidad de las grandes embarcaciones (hasta 40 km/h) pero también muy por debajo de las velocidades alcanzables en la aviación comercial (unos 1\,000 km/h). Así pues, se ha decidido establecer una velocidad de 160 km/h.
+
+\paragraph{Consumo específico.} Sabiendo que la aeronave a diseñar contará con motor(es) de tipo \emph{piston-prop}, es posible obtener de la \rmfig{consumo}{jpg}{90}{bt}{Relación entre el número de Mach de vuelo y el consumo específico para distintas tipologías de motor} una estimación para el consumo específico equivalente. Sabiendo que la velocidad del sonido al nivel del mar es de 1\,225 km/h, el Mach de crucero para la aeronave de diseño será $M=V/a=0.13$, obteniendo de la gráfica un consumo específico equivalente de $0.15$ h$^-1$ para la curva \emph{piston-prop}.
+
+\paragraph{Eficiencia aerodinámica.} Por último se requiere conocer el valor de uno de los parámetros que hacen destacar a los ekranoplanos por encima del resto: la eficiencia aerodinámica. Esta parámetro se sitúa entre 15 y 20 en aviación comercial, aunque Lippisch consiguió llevarlo por encima de 25 con sus diseños. Por ello, para el ekranoplano a diseñar se asume $\left(L/D\right) = 25$.
+
+Con todos los parámetros o bien fijados o bien estimados, es posible determinar una aproximación para la fracción de peso asociada a la fase de crucero. Despejando de \req{breguet} se llega a:
+\eq{WiWf}{
+\frac{W_i}{W_f} = e^{-\frac{RC_e}{V\left( L/D \right)}} = 0.97
+}
+es decir, durante el curcero se quema una cantidad de combustible cuyo peso equivale aproximadamente al 3\% del peso de la aeronave al inicio de la fase de crucero.
+
+Dado que no se dispone de las fracciones de peso para todas las secciones de la misión, si no únicamente de la correspondiente al crucero (0.97) y al resto de fases en su conjunto (0.94), es imprescindible hacer la siguiente suposición para poder hallar la fracción de peso de combustible global:
+
+\emph{Se asume despreciable el consumo de combustible asociado a las fases de la misión posteriores al crucero.}
+
+De este modo, la fracción de combustible se puede calcular de forma sencilla como:
+\eq{WfWto}{
+\frac{W_f}{W_{to}} = 1 - 0.97\times0.94 = 0.088
+}
+
+
+\subsubsection{Peso al despegue}
+\label{sec:design:weights:to}
+
+Una vez estimados los diferentes pesos que contribuyen al peso total de la aeronave, es posible utilizar la ecuación \req{Wto} para hallar su valor. Sin embargo, como ya se ha mencionado, la fracción de peso en vacío depende a su vez del valor del peso al despegue, estableciendo una relación recursiva que únicamente se puede abordar mediante un proceso iterativo.
+
+Tomando un valor inicial arbitrario para el peso al despegue, $W_{to} = 5W_p = 1\,750$ kg, el proceso iterativo converge ofreciendo un valor de la fracción de peso en vacío de $0.645$ y un peso al despegue de:
+\eq{Wtovalue}{
+W_{to} = 1\,570$ kg$
+}
+
+El peso en vacío previsto para la aeronave será de:
+\eq{Wevalue}{
+W_{e} = 1\,010$ kg$
+}
+y el peso de combustible a incorporar para completar la misión de 800 km será:
+\eq{Wfvalue}{
+W_{f} = 140$ kg$
+}
+
+Se recuerda que el peso correspondiente a la tripulación y a la carga de pago es:
+\eq{Wcpvalue}{
+W_{c} + W_p = 420$ kg$
+}
+
+Es interesante contrastar estos datos con los de los aviones similares. A pesar de todas las suposiciones y estimaciones realizadas, los valores obtenidos son bastante próximos a los del Lippisch X-114, que con capacidad para 6 pasajeros, pesaba 1\,000 kg en vacío y 1\,500 kg al despegue en condiciones de carga de pago y combustible máximos. Este hecho es indicativo de que los parámetros estimados no se alejan en exceso de su valor real, por lo que algunos de ellos, como la eficiencia aerodinámica, podrán volverse a utilizar más adelante sin correr el riesgo de introducir grandes incertidumbres en los cálculos.
+
+
+\subsection{Dimensionamiento inicial}
+\label{sec:design:sizing}
+
+
+
