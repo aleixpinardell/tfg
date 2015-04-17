@@ -1,0 +1,68 @@
+Uno de los principales factores limitantes del modelo a escala del vehículo WIG construido es el hecho de que no cuenta con una planta propulsora. Esto implica que, para poder determinar sus características de vuelo será necesario diseñar unas pruebas que permitan la propulsión del vehículo mediante fuerzas externas al mismo. Para ello, será necesario ingeniar un sistema que permita dotar al modelo de una velocidad inicial conocida, evitando en la medida de lo posible que este sistema externo afecte notablemente a la eficiencia y a los resultados de las pruebas.
+
+En las siguientes subsecciones se expondrá cuál es el sistema ideado para propulsar el modelo, indicando también las pequeñas modificaciones que se han debido realizar sobre el mismo. A continuación, se explicará cómo y dónde se han llevado a cabo las pruebas y se proporcionarán los resultados obtenidos, que serán sometidos a un discusión crítica y justificada.
+
+
+\subsection{Preparación}
+\label{sec:tests:preparation}
+
+\subsubsection{Concepción de las pruebas}
+\label{sec:tests:preparation:conception}
+
+Las principales dificultades que surgen a la hora de determinar las prestaciones del modelo son consecuencia de la decisión de haber construido un modelo no autopropulsado, por motivos comentados anteriormente. Si hubiese incorporado una pequeña planta propulsora, habría sido suficiente con establecer una potencia y medir una serie de prestaciones como la velocidad o la separación vertical, entre otras.
+
+Sin embargo, esta carencia obliga a ser más creativos e idear una serie de pruebas alternativas. En lugar de asociar una serie de potencias generadas por la planta propulsora a las correspondientes velocidades alcanzadas por el modelo, se proponen otro tipo de pruebas en las que se asociará un impulso inicial conocido a la distancia recorrida por el modelo hasta su detención.
+
+Asimismo, durante las pruebas se prestará especial atención a un factor difícilmente cuantificable pero fácilmente observable: la estabilidad del modelo para distintas velocidades (es decir, para distintos impulsos iniciales). Por ello, las pruebas se grabarán en vídeo para un posterior análisis detallado de la trayectoria del vehículo, así como de las posibles variaciones de altitud y del ángulo de cabeceo durante el vuelo.
+
+
+\subsubsection{Mecanismo de lanzamiento}
+\label{sec:tests:preparation:mechanism}
+
+Al no contar con planta propulsora, el modelo se debe poner en movimiento mediante la acción de alguna fuerza externa. El método más natural y sencillo es lanzarlo manualmente, pero esto imposibilita la cuantificación de las prestaciones del modelo, ya que resulta muy difícil lanzarlo con la velocidad y el ángulo deseados.
+
+Así pues, se ha optado por el uso de un resorte para dotar al modelo de una velocidad inicial. Los resorte acumulará una energía potencial elástica (calculable) que se transformará en energía cinética, haciendo salir al modelo de su posición de reposo. Además, si el mecanismo de lanzamiento se diseña cuidadosamente, es posible lanzar el vehículo con el ángulo deseado e incluso dotarlo de una velocidad inicial deseada que pueda resultar de especial interés.
+
+Aunque se haya hablado del uso de un resorte, esto no implica necesariamente el uso de un muelle metálico. La definición técnica y más amplia de resorte es la siguiente:\cite{ref:resorte} \emph{operador elástico capaz de almacenar energía y desprenderse de ella sin sufrir deformación permanente cuando cesan las fuerzas o la tensión a las que es sometido}. Dentro de esta definición entra también el concepto de cinta elástica, que es lo que se utilizará para efectuar el lanzamiento del modelo (\rmfig{cintaelastica}{jpg}{90}{ht}{Cinta elástica perforada utilizada para el lanzamiento del modelo}).
+
+Uno de los extremos de la cinta se fijará al suelo (o a la superficie sobre la que se vaya a lanzar el modelo), mediante cinta adhesiva, tal y como se muestra en la \rmfig{cintapreparada}{jpg}{130}{ht}{Detalle de la cinta elástica con sus dos extremos acondicionados para el lanzamiento del modelo}. En el otro extremo se realiza un agujero que permitirá "anclar" el modelo a la cinta (será necesario realizar adaptaciones en el modelo, como se detallará en la siguiente subsección). La cinta se someterá a tensión manualmente, incrementando su longitud, de modo que almacenará energía potencial elástica. Realmente, no se estirará de la cinta, sino del modelo, que estará unido a ésta. Al liberarlo, la cinta recuperará su longitud no excitada, transmitiendo la energía potencial elástica que había acumulado al modelo, que se liberará de la cinta y iniciará el vuelo con una velocidad determinada, en función de cuánto se haya estirado la cinta elástica. Este incremento de longitud se medirá en el punto correspondiente al orificio realizado en el extremo de la cinta.
+
+
+\subsubsection{Adaptación del modelo}
+\label{sec:tests:preparation:adaptation}
+
+Como ya se ha anticipado, es necesario incorporar al modelo un elemento que le permita permanecer unido a la cinta elástica mientras ésta está en tensión y que, al mismo tiempo, permita que el vehículo se libere de la cinta una vez todo su energía potencial elástica haya sido liberada.
+
+Para ello, se ha incorporado un gancho o alcayata en la parte inferior delantera del fuselaje del modelo, que sobresale ligeramente, tal y como se aprecia en la \rmfig{alcayataangulo}{jpg}{110}{ht}{Alcayata en la parte delantera del fuselaje}. Nótese que se le ha dotado de un cierto ángulo de ataque con el objetivo de que se pueda liberar de la cinta elástica con una pérdida mínima de energía.
+
+Aunque la alcayata utilizada cuenta con un roscado en la parte que ha sido introducida en el fuselaje, esto no es suficiente para mantenerla unida al modelo adecuadamente, debido a las características del poliestireno expandido. Por ello, tal y como se observa en la \rmfig{alcayataarandela}{jpg}{110}{ht}{Detalle de la arandela y la cola utilizadas para mantener unida la alcayata al fuselaje y distribuir los esfuerzos}, se ha hecho uso de cola de contacto (la misma que la utilizada para unir las partes del modelo) y además se ha incorporado una arandela de plástico, con el objetivo de evitar que la alcayata rompa el material del modelo cuando éste se encuentra unido a la cinta elástica en tensión. Al distribuir cola alrededor de la alcayata y de la arandela, la tensión ejercida por la alcayata sobre el modelo se distribuye y se evitan posibles daños.
+
+Tras esta incorporación, la masa del modelo asciende hasta los 34 gramos y su centro de gravedad se adelanta hasta situarse a 27 cm del extremo frontal del fuselaje.
+
+
+\subsection{Desarrollo}
+\label{sec:tests:development}
+
+Se han realizado varios lanzamientos, excitando la cinta elástica hasta alcanzar elongaciones de 30, 40 y 50 cm.
+
+BLA BLA
+
+Las pruebas se han realizado al aire libre sobre una superficie aparentemente lisa.
+
+BLA BLA BLA
+
+A pesar del bajo viento, se ha notado que en un sentido los resultados son diferentes a los obtenidos en el sentido opuesto, por lo que se han tomado medidas para ambos sentidos con el objetivo de obtener una media posteriormente que se aproxime más al resultado real.
+
+BLA BLA BLA BLA
+
+Se han grabado las pruebas con una cámara de vídeo a 25 fps (fotogramas por segundo), de donde se podrá medir la velocidad inicial del modelo determinando la distancia recorrida entre varios fotogramas consecutivos.
+
+\mfig{lanzamientoperfil}{jpg}{130}{ht}{Fase inicial del lanzamiento del modelo. Entre el primero y el último fotograma han transcurrido 12 ms}
+
+\FloatBarrier
+
+
+\subsection{Resultados}
+\label{sec:tests:results}
+
+
