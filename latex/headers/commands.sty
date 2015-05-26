@@ -8,16 +8,15 @@
 	\section{#2}
 	\label{sec:#1}
 	\input{./contents/#1}
-	\newpage
+    \FloatBarrier
+	\clearpage
 }
 
 \newcommand{\sectionref}[1]{Sección \ref{sec:#1}}
 
 % \mfig{nombre}{formato}{ancho en mm}{posición}{pie de foto}
 \newcommand{\mfig}[5]{\begin{figure}[#4]\centering\includegraphics[width=#3mm]{#1.#2}\caption[#5]{#5.}\label{fig:#1}\end{figure}}
-
 \newcommand{\rfig}[1]{Fig. \ref{fig:#1}}
-
 \newcommand{\rmfig}[5]{\rfig{#1}\mfig{#1}{#2}{#3}{#4}{#5}}
 
 % \eq{label}{equation}

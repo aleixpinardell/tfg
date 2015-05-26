@@ -15,14 +15,14 @@
 \thispagestyle{empty}
 \cleardoublepage
 \begin{abstract}
-%\input{abstract.tex}
+\input{abstract.tex}
 \end{abstract}
 \newpage
 
 \pagenumbering{roman}
 \setcounter{page}{4}
 
-%\input{nomenclature.tex}
+\input{nomenclature.tex}
 \newpage
 
 \tableofcontents
@@ -41,6 +41,11 @@
 \writecontent{design}{Diseño conceptual}
 \writecontent{building}{Construcción del modelo a escala}
 \writecontent{tests}{Pruebas experimentales}
+\writecontent{conclusions}{Conclusiones y trabajos futuros}
+\appendix
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}    
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\writecontent{appendix}{Apéndices}
 
 
 \appendix
