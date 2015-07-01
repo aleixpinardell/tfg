@@ -1,6 +1,6 @@
 En esta sección se abordará el diseño conceptual de un ekranoplano de tipo Lippisch, el cual servirá de base para la construcción del modelo a escala que posteriormente será sometido a distintas pruebas con el fin de determinar sus prestaciones.
 
-Para ello se partirá de datos de ekranoplanos Lippisch ya existentes que gocen de cierto prestigio, así como algunas de las técnicas de diseño expuestas en las referencia \cite{ref:raymer} y \cite{ref:roskam}.
+Para ello se partirá de datos de ekranoplanos Lippisch ya existentes que gocen de cierto prestigio, así como algunas de las técnicas de diseño expuestas en las referencias \cite{ref:raymer} y \cite{ref:roskam}.
 
 Teniendo en cuenta las dificultades que previsiblemente se encontrarán a la hora de construir con exactitud el modelo a escala, durante el diseño de la aeronave primará la sencillez y rapidez de cálculo sobre la precisión, marcando como objetivo la determinación del orden de magnitud de una serie de parámetros, principalmente geométricos y de peso. Además, los métodos de diseño expuestos en las citadas referencias se basan en aeronaves que no operan en efecto suelo, por lo que carece de sentido aplicarlos estrictamente.
 
@@ -58,13 +58,13 @@ Cabe destacar que, aunque se haya mencionado que la capacidad de la aeronave es 
 
 \paragraph{Tripulación.} Se considera que, debido al reducido número de pasajeros que se espera que vayan a bordo del vehículo, será suficiente con un único piloto. De las aeronaves similares consideradas, tan sólo una de ellas incluye dos tripulantes.
 
-\paragraph{Ala.} Como es habitual en la categoría de ekranoplanos de tipo Lippisch, el ala consiste en un ala delta invertida, situada a una altura media respecto el fuselaje, y con dihedro negativo, es decir, más elevada en la raíz que en la punta. Además, cuenta con un cierto ángulo de ataque, de modo que el borde de ataque se sitúa a una altura superior en relación al borde de fuga.
+\paragraph{Ala.} Como es habitual en la categoría de ekranoplanos de tipo Lippisch, el ala consiste en un ala delta invertida, situada a una altura media respecto el fuselaje, y con diedro negativo, es decir, más elevada en la raíz que en la punta. Además, cuenta con un cierto ángulo de ataque, de modo que el borde de ataque se sitúa a una altura superior en relación al borde de fuga.
 
 \paragraph{Cola.} La cola se sitúa en una posición elevada, con el fin de que no se vea excesivamente afectada por el efecto suelo. En las aeronaves similares consideradas se han utilizado dos tipos de colas. Por un lado, se observa la cola en T, en la que existe un único timón vertical, sobre el cual se sitúa el estabilizador horizontal; por otro lado, se ha usado también una variante en que existen dos timones verticales que tienden a forman una V entre sí, y sobre los cuales se sitúa el estabilizador horizontal. Se ha preferido hacer uso para la aeronave de diseño de una cola T, pues resulta más sencilla de construir.
 
 \paragraph{Planta propulsora.} Ninguno de los modelos considerados cuenta con la tecnología PAR, por lo que disponen de una única planta propulsora que se utiliza tanto durante la fase de crucero como de despegue. Los motores utilizados son de tipo \emph{piston-prop}, y en el caso de los modelos más antiguos se incorporó solo una unidad, mientras que en los más nuevos se ha preferido incluir dos motores, otorgando mayor seguridad de operación en caso de fallo de un motor.
 
-En cualquier caso, éste no es un factor determinante en el diseño de la aeronave, pues en este primera fase de pruebas se pretende evaluar las propiedades de un modelo no autopropulsado. Sin embargo, sí puede resultar interesante conocer el motor a utilizar en la versión autopropulsada, ya que el motor aporta un peso concentrado significativo y contribuye al aumento de la resistencia de la aeronave, modificando sus características y prestaciones. Por ello, más adelante se determinará el motor a utilizar y se tendrán en cuenta su peso y localización para hacer coincidir el centro de gravedad del modelo a escala con el de la aeronave de diseño.
+En cualquier caso, éste no es un factor determinante en el diseño de la aeronave, pues en este primera fase de pruebas se pretende evaluar las propiedades de un modelo no autopropulsado.
 
 
 \subsection{Estimación de pesos}
@@ -77,7 +77,7 @@ El método seguido para estimar el peso de la aeronave es el propuesto por Rayme
 W_{to} = W_c + W_p + W_e + W_f
 }
 
-El peso de la tripulación y la carga de pago es fácil de estimar, pero los pesos de la aeronave en vacío y del combustible dependen a su vez de $W_{to}$, por lo que resulta conveniente reescribir la anterior expresión en la forma:
+El peso de la tripulación y la carga de pago son fáciles de estimar, pero los pesos de la aeronave en vacío y del combustible dependen a su vez de $W_{to}$, por lo que resulta conveniente reescribir la anterior expresión en la forma:
 \eq{Wto2}{
 W_{to} = W_c + W_p + \left( \frac{W_e}{W_{to}} \right)W_{to} + \left( \frac{W_f}{W_{to}} \right)W_{to}
 }
@@ -132,11 +132,11 @@ Afortunadamente el peso de combustible consumido durante la fase de crucero se p
 
 \paragraph{Alcance.} El primer paso es fijar el alcance de la aeronave. A priori se podría tomar cualquier valor deseado, aunque debe ser razonable y estar en el mismo orden de magnitud de aviones similares de la misma categoría. En base a prestaciones y características de los ekranoplanos de referencia y a la tendencia histórica observada, se ha optado por establecer el alcance deseado en 800 km.
 
-\paragraph{Velocidad.} La velocidad de crucero es un parámetro de diseño que también ofrece cierta flexibilidad a la hora de concebir la aeronave. Sin embargo, para los ekranoplanos de tipo Lippisch con características similares al que se pretende diseñar, parece existir un valor estándard situado en torno los 150-160 km/h, sustancialmente superior a la velocidad de las grandes embarcaciones (hasta 40 km/h) pero también muy por debajo de las velocidades alcanzadas hoy en día en la aviación comercial (unos 1\,000 km/h). Así pues, se ha decidido escoger una velocidad de 160 km/h.
+\paragraph{Velocidad.} La velocidad de crucero es un parámetro de diseño que también ofrece cierta flexibilidad a la hora de concebir la aeronave. Sin embargo, para los ekranoplanos de tipo Lippisch con características similares al que se pretende diseñar, existe un valor bastante habitual situado en torno los 150-160 km/h, sustancialmente superior a la velocidad de las grandes embarcaciones (hasta 40 km/h) pero también muy por debajo de las velocidades alcanzadas hoy en día en la aviación comercial (unos 1\,000 km/h). Así pues, se ha decidido escoger una velocidad de 160 km/h.
 
 \paragraph{Consumo específico.} Sabiendo que la aeronave a diseñar contará con motor(es) de tipo \emph{piston-prop}, es posible deducir de la \rmfig{consumo}{jpg}{90}{bt}{Relación entre el número de Mach de vuelo y el consumo específico para distintas tipologías de motor} (obtenida de \cite{ref:raymer}) una estimación para el consumo específico equivalente. Sabiendo que la velocidad del sonido al nivel del mar es de 1\,225 km/h, el Mach de crucero para la aeronave de diseño será $M=V/a=0.13$, obteniendo de la gráfica un consumo específico equivalente de $0.15$ h$^{-1}$ para la curva correspondiente a motores \emph{piston-prop}.
 
-\paragraph{Eficiencia aerodinámica.} Por último se requiere conocer el valor de uno de los parámetros que hacen destacar a los ekranoplanos por encima del resto: la eficiencia aerodinámica. Esta parámetro se sitúa entre 15 y 20 en aviación comercial, aunque Lippisch consiguió llevarlo por encima de 25 con sus diseños. Por ello, para el ekranoplano a diseñar se asume $L/D = 25$.
+\paragraph{Eficiencia aerodinámica.} Por último se requiere conocer el valor de uno de los parámetros que hacen destacar a los ekranoplanos por encima del resto: la eficiencia aerodinámica. Esta parámetro se sitúa entre 15 y 20 en aviación comercial, aunque Lippisch consiguió llevarlo por encima de 25 con sus diseños\cite{ref:wigpaper}. Por ello, para el ekranoplano a diseñar se asume $L/D = 25$.
 
 Con todos los parámetros o bien fijados o bien estimados, es posible determinar una aproximación para la fracción de peso asociada a la fase de crucero. Despejando de \req{breguet} se llega a:
 \eq{WiWf}{
